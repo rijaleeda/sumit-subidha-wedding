@@ -12,7 +12,7 @@ export default function Home() {
       <p className="ganesh">श्री गणेशाय नमः</p><p className="family-line">Together with their families</p>
       <h1 id="couple-names"><em>Sumit</em><span>&amp;</span><em>Subidha</em></h1>
       <p className="invite-line">invite you to celebrate their wedding</p><div className="ornament" aria-hidden="true"><span/>◆<span/></div>
-      <p className="date">December 12, 2026</p><p className="location">Houston, Texas</p>
+      <p className="date">December 12, 2026</p>
       <p className="venue">Rosa Villa</p>
       <a className="address" href="https://www.google.com/maps/search/?api=1&query=Rosa+Villa%2C+1282+County+Rd+381+S%2C+Cleveland%2C+TX+77328" target="_blank" rel="noopener noreferrer">1282 County Rd 381 S, Cleveland, TX 77328</a>
       <div className="event-actions"><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sumit%20%26%20Subidha%20Wedding&dates=20261212%2F20261213&location=Rosa%20Villa%2C%201282%20County%20Rd%20381%20S%2C%20Cleveland%2C%20TX%2077328&details=Wedding%20celebration%20for%20Sumit%20and%20Subidha" target="_blank" rel="noopener noreferrer">Add to calendar</a><a href="https://www.google.com/maps/search/?api=1&query=Rosa+Villa%2C+1282+County+Rd+381+S%2C+Cleveland%2C+TX+77328" target="_blank" rel="noopener noreferrer">Open in Maps</a></div>
