@@ -17,6 +17,12 @@ export default function Home() {
       <a className="address" href="https://www.google.com/maps/search/?api=1&query=Rosa+Villa%2C+1282+County+Rd+381+S%2C+Cleveland%2C+TX+77328" target="_blank" rel="noopener noreferrer">1282 County Rd 381 S, Cleveland, TX 77328</a>
       <div className="event-actions"><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sumit%20%26%20Subidha%20Wedding&dates=20261212%2F20261213&location=Rosa%20Villa%2C%201282%20County%20Rd%20381%20S%2C%20Cleveland%2C%20TX%2077328&details=Wedding%20celebration%20for%20Sumit%20and%20Subidha" target="_blank" rel="noopener noreferrer">Add to calendar</a><a href="https://www.google.com/maps/search/?api=1&query=Rosa+Villa%2C+1282+County+Rd+381+S%2C+Cleveland%2C+TX+77328" target="_blank" rel="noopener noreferrer">Open in Maps</a></div>
     </section>
+    <section className="registry-card" aria-labelledby="registry-title">
+      <p className="registry-kicker">With love</p>
+      <h2 id="registry-title">Wedding Registry</h2>
+      <p>Your presence is the greatest gift. For those who wish to celebrate with a gift, we have created an Amazon wedding registry.</p>
+      <a href="https://www.amazon.com/wedding/guest-view/2KATNO8WJ1CN5" target="_blank" rel="noopener noreferrer">View Our Registry</a>
+    </section>
     <section className="rsvp-card" id="rsvp" aria-labelledby="rsvp-title">
       {status==="success"?<div className="success"><Heart aria-hidden="true"/><h2 id="rsvp-title">Thank you</h2><p>Your response has been received.</p><button onClick={()=>setStatus("idle")}>Submit another response</button></div>:<>
         <div className="form-heading"><p>Kindly respond</p><h2 id="rsvp-title">RSVP</h2></div>
