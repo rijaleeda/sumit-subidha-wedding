@@ -11,7 +11,7 @@ export default function Home() {
     <header className="site-header">
       <a className="site-mark" href="#home" aria-label="Sumit and Subidha wedding home">S <span>&amp;</span> S</a>
       <nav aria-label="Wedding website navigation">
-        <a href="#home">Home</a><a href="#travel">Travel</a><a href="#rsvp">RSVP</a><a href="#registry">Registry</a>
+        <a href="#home">Home</a><a href="#rsvp">RSVP</a><a href="#registry">Registry</a><a href="#travel">Travel</a>
       </nav>
     </header>
     <main className="invitation-page">
@@ -23,6 +23,18 @@ export default function Home() {
       <p className="venue">Rosa Villa</p>
       <a className="address" href="https://www.google.com/maps/search/?api=1&query=Rosa+Villa%2C+1282+County+Rd+381+S%2C+Cleveland%2C+TX+77328" target="_blank" rel="noopener noreferrer">1282 County Rd 381 S, Cleveland, TX 77328</a>
       <div className="event-actions"><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sumit%20%26%20Subidha%20Wedding&dates=20261212%2F20261213&location=Rosa%20Villa%2C%201282%20County%20Rd%20381%20S%2C%20Cleveland%2C%20TX%2077328&details=Wedding%20celebration%20for%20Sumit%20and%20Subidha" target="_blank" rel="noopener noreferrer">Add to calendar</a><a href="https://www.google.com/maps/search/?api=1&query=Rosa+Villa%2C+1282+County+Rd+381+S%2C+Cleveland%2C+TX+77328" target="_blank" rel="noopener noreferrer">Open in Maps</a></div>
+    </section>
+    <section className="rsvp-card" id="rsvp" aria-labelledby="rsvp-title">
+      {status==="success"?<div className="success"><Heart aria-hidden="true"/><h2 id="rsvp-title">Thank you</h2><p>Your response has been received.</p><button onClick={()=>setStatus("idle")}>Submit another response</button></div>:<>
+        <div className="form-heading"><p>Kindly respond</p><h2 id="rsvp-title">RSVP</h2></div>
+        <form onSubmit={submitRsvp}><label>Full name<input name="name" required autoComplete="name" placeholder="Your name"/></label><fieldset><legend>Will you be attending?</legend><RadioGroup className="attendance" value={attendance} onValueChange={setAttendance}><label><RadioGroupItem value="accept"/>Joyfully accept</label><label><RadioGroupItem value="decline"/>Regretfully decline</label></RadioGroup></fieldset>{attendance==="accept"&&<fieldset className="guest-counts"><legend>Number attending</legend><div className="guest-grid"><label>Adults<input name="adults" aria-label="Number of adults" type="number" inputMode="numeric" min="1" max="10" defaultValue="1"/></label><label>Children<input name="children" aria-label="Number of children" type="number" inputMode="numeric" min="0" max="10" defaultValue="0"/></label><label>Infants <span>(under 2)</span><input name="infants" aria-label="Number of infants under 2" type="number" inputMode="numeric" min="0" max="10" defaultValue="0"/></label></div></fieldset>}<label>Note <span>(optional)</span><textarea name="note" rows={3} placeholder="Well wishes or questions…"/></label><button className="submit" disabled={status==="sending"}>{status==="sending"?"Sending…":"Send RSVP"}</button>{status==="error"&&<p className="error">We could not save your response. Please try again.</p>}</form>
+      </>}
+    </section>
+    <section className="registry-card" id="registry" aria-labelledby="registry-title">
+      <p className="registry-kicker">With love</p>
+      <h2 id="registry-title">Wedding Registry</h2>
+      <p>Your presence is the greatest gift. For those who wish to celebrate with a gift, we have created an Amazon wedding registry.</p>
+      <a href="https://www.amazon.com/wedding/guest-view/2KATNO8WJ1CN5" target="_blank" rel="noopener noreferrer">View Our Registry</a>
     </section>
     <section className="travel-card" id="travel" aria-labelledby="travel-title">
       <div className="section-heading"><p>Plan your visit</p><h2 id="travel-title">Travel &amp; Stay</h2><span>Helpful places for our out-of-town guests</span></div>
@@ -36,18 +48,6 @@ export default function Home() {
         <article className="travel-item"><div><h4>Sam Houston National Forest</h4><p>Wooded trails, scenic drives, and peaceful East Texas nature.</p></div><a href="https://www.google.com/maps/search/?api=1&query=Sam+Houston+National+Forest" target="_blank" rel="noopener noreferrer">Explore</a></article>
         <article className="travel-item"><div><h4>Double Lake Recreation Area</h4><p>A lakeside destination for hiking, fishing, and picnicking.</p></div><a href="https://www.google.com/maps/search/?api=1&query=Double+Lake+Recreation+Area%2C+TX" target="_blank" rel="noopener noreferrer">Explore</a></article>
       </div>
-    </section>
-    <section className="rsvp-card" id="rsvp" aria-labelledby="rsvp-title">
-      {status==="success"?<div className="success"><Heart aria-hidden="true"/><h2 id="rsvp-title">Thank you</h2><p>Your response has been received.</p><button onClick={()=>setStatus("idle")}>Submit another response</button></div>:<>
-        <div className="form-heading"><p>Kindly respond</p><h2 id="rsvp-title">RSVP</h2></div>
-        <form onSubmit={submitRsvp}><label>Full name<input name="name" required autoComplete="name" placeholder="Your name"/></label><fieldset><legend>Will you be attending?</legend><RadioGroup className="attendance" value={attendance} onValueChange={setAttendance}><label><RadioGroupItem value="accept"/>Joyfully accept</label><label><RadioGroupItem value="decline"/>Regretfully decline</label></RadioGroup></fieldset>{attendance==="accept"&&<fieldset className="guest-counts"><legend>Number attending</legend><div className="guest-grid"><label>Adults<input name="adults" aria-label="Number of adults" type="number" inputMode="numeric" min="1" max="10" defaultValue="1"/></label><label>Children<input name="children" aria-label="Number of children" type="number" inputMode="numeric" min="0" max="10" defaultValue="0"/></label><label>Infants <span>(under 2)</span><input name="infants" aria-label="Number of infants under 2" type="number" inputMode="numeric" min="0" max="10" defaultValue="0"/></label></div></fieldset>}<label>Note <span>(optional)</span><textarea name="note" rows={3} placeholder="Well wishes or questions…"/></label><button className="submit" disabled={status==="sending"}>{status==="sending"?"Sending…":"Send RSVP"}</button>{status==="error"&&<p className="error">We could not save your response. Please try again.</p>}</form>
-      </>}
-    </section>
-    <section className="registry-card" id="registry" aria-labelledby="registry-title">
-      <p className="registry-kicker">With love</p>
-      <h2 id="registry-title">Wedding Registry</h2>
-      <p>Your presence is the greatest gift. For those who wish to celebrate with a gift, we have created an Amazon wedding registry.</p>
-      <a href="https://www.amazon.com/wedding/guest-view/2KATNO8WJ1CN5" target="_blank" rel="noopener noreferrer">View Our Registry</a>
     </section>
   </main>
   </>
