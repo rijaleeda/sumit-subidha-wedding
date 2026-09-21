@@ -42,11 +42,18 @@ export default function Home() {
         <div className="travel-group-heading"><h3>Nearby hotels</h3><a href="https://www.google.com/maps/search/?api=1&query=hotels+near+Rosa+Villa%2C+1282+County+Rd+381+S%2C+Cleveland%2C+TX+77328" target="_blank" rel="noopener noreferrer">See all nearby</a></div>
         <article className="travel-item"><div><h4>Holiday Inn Express &amp; Suites Cleveland</h4><p>600 Hwy 59 South, Cleveland, TX 77327</p></div><a href="https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Express+%26+Suites+Cleveland%2C+600+Hwy+59+South%2C+Cleveland%2C+TX+77327" target="_blank" rel="noopener noreferrer">Directions</a></article>
         <article className="travel-item"><div><h4>Best Western Cleveland Inn &amp; Suites</h4><p>708 Highway 59 S, Cleveland, TX 77328</p></div><a href="https://www.google.com/maps/search/?api=1&query=Best+Western+Cleveland+Inn+%26+Suites%2C+708+Highway+59+S%2C+Cleveland%2C+TX+77328" target="_blank" rel="noopener noreferrer">Directions</a></article>
+        <article className="travel-item"><div><h4>Houston CityPlace Marriott</h4><p>Springwoods Village, Spring</p></div><a href="https://www.marriott.com/en-us/hotels/houns-houston-cityplace-marriott-at-springwoods-village/overview/" target="_blank" rel="noopener noreferrer">View hotel</a></article>
+        <article className="travel-item"><div><h4>SpringHill Suites Houston The Woodlands</h4><p>The Woodlands</p></div><a href="https://www.marriott.com/en-us/hotels/houln-springhill-suites-houston-the-woodlands/overview/" target="_blank" rel="noopener noreferrer">View hotel</a></article>
+        <article className="travel-item"><div><h4>Courtyard Houston Kingwood</h4><p>Kingwood</p></div><a href="https://www.marriott.com/en-us/hotels/houkw-courtyard-houston-kingwood/overview/" target="_blank" rel="noopener noreferrer">View hotel</a></article>
+        <article className="travel-item"><div><h4>TownePlace Suites Conroe</h4><p>Conroe</p></div><a href="https://www.marriott.com/en-us/hotels/houto-towneplace-suites-conroe/overview/" target="_blank" rel="noopener noreferrer">View hotel</a></article>
       </div>
       <div className="travel-group attractions">
         <div className="travel-group-heading"><h3>Explore nearby</h3></div>
         <article className="travel-item"><div><h4>Sam Houston National Forest</h4><p>Wooded trails, scenic drives, and peaceful East Texas nature.</p></div><a href="https://www.google.com/maps/search/?api=1&query=Sam+Houston+National+Forest" target="_blank" rel="noopener noreferrer">Explore</a></article>
         <article className="travel-item"><div><h4>Double Lake Recreation Area</h4><p>A lakeside destination for hiking, fishing, and picnicking.</p></div><a href="https://www.google.com/maps/search/?api=1&query=Double+Lake+Recreation+Area%2C+TX" target="_blank" rel="noopener noreferrer">Explore</a></article>
+        <article className="travel-item"><div><h4>NASA Johnson Space Center</h4><p>Explore Houston&apos;s connection to human spaceflight.</p></div><a href="https://www.nasa.gov/johnson/" target="_blank" rel="noopener noreferrer">Visit site</a></article>
+        <article className="travel-item"><div><h4>Hermann Park</h4><p>Gardens, trails, and cultural attractions in central Houston.</p></div><a href="https://hermannpark.org/" target="_blank" rel="noopener noreferrer">Visit site</a></article>
+        <article className="travel-item"><div><h4>Kemah Boardwalk</h4><p>Waterfront dining, rides, and family entertainment.</p></div><a href="https://www.kemahboardwalk.com/" target="_blank" rel="noopener noreferrer">Visit site</a></article>
       </div>
     </section>
   </main>
